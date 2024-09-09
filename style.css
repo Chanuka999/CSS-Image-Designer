@@ -9,7 +9,7 @@
     position: absolute;
     width: 200px;
     height: 250px;
-    top: 30%;
+    top: 10%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -18,9 +18,9 @@
 
 @keyframes autoRun{
     from{
-        transform: perspective(1000px) rotateY(0deg);
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
     }to{
-        transform: perspective(1000px) rotateY(360deg);
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
     }
 }
 
@@ -33,7 +33,22 @@
 }
 
 .banner .slider .item img{
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 60%;
     object-fit: cover;
+}
+
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(50%);
+    width: min(1400px,100vm);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
 }
